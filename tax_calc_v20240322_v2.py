@@ -4,11 +4,11 @@ class calc_tax: #2024年所得稅計算
         self.Is_Single = input("輸入配偶狀態(單身/已婚)： ")
         self.Age = int(input("輸入您的年齡："))
         
-        self.Payroll_deductions= 207000 #薪資扣除額
+        self.Payroll_deductions = 207000 #薪資扣除額
         self.tax_exemption = 92000 #免稅額
         self.standard_deduction = 124000 #標準扣除額
         
-        if(self.Is_Single == '已婚'):#如果有扮女則需要輸入伴侶年齡
+        if(self.Is_Single == '已婚'):#如果有伴侶則需要輸入伴侶年齡
             self.spouse_age = int(input("請輸入伴侶年齡："))
             
     def calc_person(self):#計算人數
@@ -48,7 +48,7 @@ class calc_tax: #2024年所得稅計算
             return 0
    
     def Amount_of_tax(self): #納稅額公式
-        Net_Amounts = self.Total_revenue - self.calc_tax_exemption() - (self.standard_deduction + self.Payroll_deductions) * self.calc_person() - self.basic_living_expeses() #納稅淨額計算 年收入 - 免稅額 - 標準扣除額 - 基本生活費差額
+        Net_Amounts = self.Total_revenue - self.calc_tax_exemption() - (self.standard_deduction + self.Payroll_deductions) * self.calc_person() - self.basic_living_expeses() #納稅淨額計算 = 年收入 - 免稅額 - 標準扣除額 - 基本生活費差額
         tax = 0
         if(Net_Amounts < 0):#納稅額計算 = 所得淨額 * 稅率 - 累進差額
             print("納稅額為0,不用報稅！")

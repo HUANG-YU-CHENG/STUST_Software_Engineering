@@ -56,11 +56,11 @@ class calc_tax: #2024年所得稅計算
             tax = Net_Amounts * 0.05
         elif(Net_Amounts > 560001 and Net_Amounts < 1260000): #級距56萬以上 ~ 126萬以下 稅率乘12%　累進差額為3萬9千2
             tax = Net_Amounts * 0.12 - 39200
-        elif(Net_Amounts > 1260001 and Net_Amounts < 2520000):#級距126萬以上 ~ 252萬以下 稅率乘20% 累進差額為14萬
+        elif(Net_Amounts > 1260001 and Net_Amounts < 2520000):#級距126萬以上 ~ 252萬以下 稅率乘20% 累進差額為14萬5
             tax = Net_Amounts * 0.2 - 140000
-        elif(Net_Amounts > 2520001 and Net_Amounts < 4720000):#級距252萬以上 ~ 472萬以下 稅率乘30% 累進差額為39為千
+        elif(Net_Amounts > 2520001 and Net_Amounts < 4720000):#級距252萬以上 ~ 472萬以下 稅率乘30% 累進差額為39萬
             tax = Net_Amounts * 0.3 - 392000
-        elif(Net_Amounts > 4720000):#級距472萬以上 稅率乘40% 累進差額為86萬4千
+        elif(Net_Amounts > 4720000):#級距472萬以上 稅率乘30% 累進差額為86萬4千
             tax = Net_Amounts * 0.4 - 864000
         print(f"納稅淨額為：{Net_Amounts:,}元,應繳納稅額為：{tax:,}元")
         
